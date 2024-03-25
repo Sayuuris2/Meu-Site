@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P minha pessoa favorita ♡</title>
+
+    <style>
+        body{
+		background-color: pink;
+		}
+		     .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+			}
+			#sim{
+				height: 40px;
+				width: 60px;
+				background-color: green;
+				border: 2px solid white;
+				border-radius: 10px; 
+				margin-left: -145px;
+			
+			}
+			#nao{
+			    position: absolute;
+			    height: 40px;
+				width: 60px;
+				background-color: red;
+				border: 2px solid white;
+				border-radius: 10px;
+				margin-left: 70px;
+				}
+    </style>
+	
+	</head>
+	
+    <body>
+	
+	    <div class="painel">
+		     <h1>Aceita renovar nosso contrato de amizade?</h1>
+	 
+			 <a href="https://www.youtube.com/watch?v=xjVZkAvmNp4"><button id="sim" > Sim!😊 </button></a>
+		     <button onmouseover="fuja()" id="nao"> Não...🤨 </button>
+			  
+			  
+	    </div>
+			
+			<script>
+			    function fuja(){
+				var botaonao = document.getElementById("nao")
+				
+				var largurajanela = window.innerWidth;
+				var alturajanela = window.innerHeight;
+				
+				var maxX = largurajanela - botaonao.offsetWidth;
+				var maxY = alturajanela - botaonao.offsetHeight;
+				
+				var aleatorioX = Math.floor(Math.random() * maxX);
+				var aleatorioY = Math.floor(Math.random() * maxY);
+				
+				botaonao.style.left = aleatorioX + "px";
+				botaonao.style.top = aleatorioY + "px";
+				
+				}
+				
+			</script>
+			
+			
+			</body>
+			</html>
